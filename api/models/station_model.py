@@ -8,5 +8,12 @@ class Station(Timestamp):
     longitude = models.FloatField()
 
 
+    class Meta:
+        ''' Meta class for Station model. '''
+        indexes = [models.Index(fields=['name'])]
+        verbose_name = 'Station'
+        verbose_name_plural = 'Stations'
+
+
     def __str__(self):
         return self.name
