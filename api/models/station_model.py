@@ -1,4 +1,4 @@
-from .timestamp_model import Timestamp
+from .timestamp import Timestamp
 from django.db import models
 
 class Station(Timestamp):

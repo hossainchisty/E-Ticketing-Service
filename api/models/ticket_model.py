@@ -1,12 +1,11 @@
-from .timestamp_model import Timestamp
+from .timestamp import Timestamp
 from django.db import models
 from .station_model import Station
-from .user_model import User
-
+from .user_model import CustomUser
 
 class Ticket(Timestamp):
     ''' A model representing a ticket info. '''
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='user')
     station_form = models.ForeignKey(Station, on_delete=models.CASCADE)
     station_to = models.ForeignKey(Station, on_delete=models.CASCADE)
     price = models.IntegerField()
