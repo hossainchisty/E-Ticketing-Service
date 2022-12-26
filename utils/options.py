@@ -1,16 +1,17 @@
 from django.db import models
 
+
 class IdentificationTypeOptions(models.TextChoices):
-    """ Identification Type Options 
-    
+    """ Identification Type Options
         CONSTANT = DB_VALUE, USER_DISPLAY_VALUE
     """
 
     BIRTH_CERTIFICATE = 'BIRTH_CERTIFICATE', 'Birth Certificate'
     NATIONAL_ID = 'NID', 'NID'
 
+
 class ClassOptions(models.TextChoices):
-    ''' Class Options For Train '''	
+    ''' Class Options For Train '''
     SHOVAN = 'SHOVAN', 'Shovan'
     S_CHAIR = 'S_CHAIR', 'Shovan Chair'
     SNIGDHA = 'SNIGDHA', 'Snigdha'
@@ -19,4 +20,3 @@ class ClassOptions(models.TextChoices):
     F_CHAIR = 'F_CHAIR', 'First Class Chair'
     F_BERTH = 'F_BERTH', 'First Class Berth'
     F_SEAT = 'F_SEAT', 'First Class Seat'
-    
