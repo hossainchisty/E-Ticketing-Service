@@ -19,5 +19,3 @@ class Timestamp(models.Model):
         # per-model basis as needed, but reverse-chronological is a good
         # default ordering for most models.
         ordering = ['-created_at', '-updated_at']
-
-
