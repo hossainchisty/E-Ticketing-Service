@@ -4,6 +4,7 @@ from api.manager import UserManager
 
 from utils.options import IdentificationTypeOptions
 
+
 class CustomUser(AbstractUser):
     """ Custom user model."""
     username = None
@@ -11,10 +12,10 @@ class CustomUser(AbstractUser):
     full_name = models.CharField(max_length=255)
     mobile_number = models.CharField(max_length=11, unique=True)
     email = models.EmailField(unique=True)
-
-    identification_type = models.CharField(max_length=20
-    , choices=IdentificationTypeOptions.choices,
-    help_text='Select a valid identification type.')
+    identification_type = models.CharField(
+        max_length=20,
+        choices=IdentificationTypeOptions.choices,
+        help_text='Select a valid identification type.')
     identification_number = models.CharField(max_length=255)
     post_code = models.CharField(max_length=255)
     address = models.CharField(max_length=255)
