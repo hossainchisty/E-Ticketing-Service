@@ -36,14 +36,18 @@ DEFAULT_APPS  = [
     'django.contrib.staticfiles',
 ]
 
+LOCAL_APPS = [
+    'api.apps.ApiConfig',
+]
 
 THIRD_PARTY_APPS = [
     'rest_framework',
 ]
 
 
-INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS
+INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
+AUTH_USER_MODEL = 'api.CustomUser'
 ##################
 # REST FRAMEWORK #
 ##################
