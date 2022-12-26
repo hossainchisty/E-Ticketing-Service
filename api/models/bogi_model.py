@@ -1,5 +1,7 @@
 from django.db import models
 from .train_model import Train
+
+
 class Bogi(models.Model):
     ''' A model representing a Bogi info. '''
     name = models.CharField(max_length=10)
